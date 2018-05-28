@@ -1,0 +1,29 @@
+{
+   "entry": "src/index.js",
+   "outputPath": "./v1",
+   "presets": ["es2015"],
+   "theme": {
+       "@primary-color": "#fcba61",
+       "@link-color": "#fcba61",
+       "@border-radius-base": "2px",
+       "@font-size-base": "16px",
+       "@line-height-base": "1.2"
+   },
+  "env": {
+    "development": {
+      "extraBabelPlugins": [
+        "dva-hmr",
+        "transform-runtime",
+        ["import", { "libraryName": "antd", "style": "css" }],
+         ["import", { "libraryName": "antd", "style": true }]
+      ]
+    },
+    "production": {
+      "extraBabelPlugins": [
+        "transform-runtime",
+        ["import", { "libraryName": "antd", "style": "css" }],
+         ["import", { "libraryName": "antd", "style": true }]
+      ]
+    }
+  }
+}
